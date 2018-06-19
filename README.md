@@ -16,7 +16,9 @@
 *   Layout responsivo;
 *   Utilizar Angular 4+ para o desenvolvimento;
 *   O uso de libs é livre.
-O que será avaliado:
+
+**O que será avaliado:**
+
 *   Organização do código;
 *   Componentização das páginas;
 *   Interface organizada e amigável;
