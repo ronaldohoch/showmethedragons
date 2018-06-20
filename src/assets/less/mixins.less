@@ -1,0 +1,11 @@
+.anime(@property: all;@duration: 300ms;@timing: cubic-bezier(0.4, 0.2, 0, 1);@delay: 0ms;) {
+    -webkit-transition: @property @duration @timing @delay;
+    -moz-transition: @property @duration @timing @delay;
+    -ms-transition: @property @duration @timing @delay;
+    -o-transition: @property @duration @timing @delay;
+    transition: @property @duration @timing @delay;
+}
+
+.anime {
+    .anime();
+}
