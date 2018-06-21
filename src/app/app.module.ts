@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { NewComponent } from './pages/dragons/new/new.component';
 
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NewComponent } from './pages/dragons/new/new.component';
     FormsModule
   ],
   providers: [
-    Auth
+    Auth,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

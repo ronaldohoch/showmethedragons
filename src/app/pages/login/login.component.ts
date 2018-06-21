@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Login } from '../../class/login'
 import { LoginService } from '../../services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,9 @@ export class LoginComponent implements OnInit {
   loginData: Login = {login:'',senha:''};
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private loginSvc:LoginService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -24,7 +27,15 @@ export class LoginComponent implements OnInit {
   }
 
   sendLogin(){
-    console.log("loginForm",this.loginForm.value);
+    if(this.loginForm.status==="VALID"){
+      this.loginSvc.verifyLogin(this.loginForm.value).then(result=>{
+        if(result){
+          this.router.navigate(['/dragons']);
+        }else{
+          alert("usuário ou senha inválidos");
+        }
+      });
+    }
   }
 
 }

@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/observable';
 
 @Injectable()
 export class LoginService {
 
   constructor() {}
 
-  verifyLogin(formData){
+  verifyLogin(formData): Promise<any>{
 
     if(formData.login=="admin" && formData.senha=="teste123"){
       sessionStorage.setItem("isLogged","true");
-      return true;
+      return Promise.resolve(true);
     }else{
-      return false;
+      return Promise.resolve(false);
     }
 
   }

@@ -1,0 +1,25 @@
+input,
+textarea,
+button,
+.form-control{
+    &:focus{
+        outline: none;
+        box-shadow:none;
+    }
+}
+form{
+    &.ng-touched.ng-invalid{
+        .ng-touched.ng-invalid{
+            border: 1px solid #dc3545;
+            box-shadow: -4px 0px 0px #dc3545;
+            .anime();
+        }
+    }
+    input{
+        &.ng-touched.ng-valid{
+            border: 1px solid #28a745;
+            box-shadow: -4px 0px 0px #28a745;
+            .anime();
+        }
+    }
+}
