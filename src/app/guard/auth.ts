@@ -5,7 +5,7 @@ import { Router, CanActivate } from '@angular/router';
 export class Auth {
     constructor(private router: Router) { }
 
-    isLogged: boolean = true;
+    isLogged: boolean = sessionStorage.getItem("isLogged")=="true"?true:false;
 
     canActivate(): boolean{
         if(this.isLogged){
