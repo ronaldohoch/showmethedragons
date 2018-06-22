@@ -13,6 +13,6 @@ export class ListDragonsService {
   private url="https://dragons-api.herokuapp.com/api";
 
   getDragons(): Observable<any>{
-    return this.http.get(this.url+"/dragons").map(res=>res.json());
+    return this.http.get(this.url+"/dragons").map(res=>res.json().items);
   }
 }

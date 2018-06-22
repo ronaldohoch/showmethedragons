@@ -3,19 +3,22 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <!-- <th scope="col">#</th> -->
-      <th>Nome</th>
-      <th>Tipo</th>
-      <th>Histórias</th>
-      <th>Ações</th>
+      <th class="col" style="width:25%">Nome</th>
+      <th class="col" style="width:25%">Tipo</th>
+      <th class="col" style="width:25%">Histórias</th>
+      <th class="col" style="width:25%">Ações</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let dragon of dragons">
       <td>{{dragon.name}}</td>
       <td>{{dragon.type}}</td>
-      <td>{{dragon.histories|json}}</td>
-      <td>{{dragon.type}}</td>
+      <td>
+        <span *ngFor="let history of dragon.histories">{{history}}</span>
+      </td>
+      <td>
+        <a href=""></a>
+      </td>
     </tr>
   </tbody>
 </table>
