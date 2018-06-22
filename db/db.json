@@ -1,0 +1,25 @@
+{
+    "dragons":[
+        {
+            "_id": "5560dab29a63224b3eb78e59",
+            "name": "Dragão (Shrek)",
+            "type": "Fire",
+            "created_at": "2015-05-23T19:53:22.430Z",
+            "slug": "dragao-shrek",
+            "__v": 0,
+            "histories": []
+        },
+        {
+            "_id": "5560dae29a63224b3eb78e5a",
+            "name": "Tiamat",
+            "type": "Hydra",
+            "created_at": "2015-05-23T19:54:10.802Z",
+            "slug": "tiamat",
+            "__v": 0,
+            "histories": [
+                "Mith",
+                "Dungeons & Dragons"
+            ]
+        }
+    ]
+}

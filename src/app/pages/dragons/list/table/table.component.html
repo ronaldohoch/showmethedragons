@@ -1,0 +1,21 @@
+<pre style="height:300px;overflow:hidden">{{dragons|json}}</pre>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <!-- <th scope="col">#</th> -->
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Histórias</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dragon of dragons">
+      <td>{{dragon.name}}</td>
+      <td>{{dragon.type}}</td>
+      <td>{{dragon.histories|json}}</td>
+      <td>{{dragon.type}}</td>
+    </tr>
+  </tbody>
+</table>

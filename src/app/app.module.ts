@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { Auth } from './guard/auth';
 import { AppComponent } from './app.component';
@@ -14,6 +15,9 @@ import { RouterModule } from '@angular/router';
 import { NewComponent } from './pages/dragons/new/new.component';
 
 import { LoginService } from './services/login.service';
+import { ListDragonsService } from './services/list-dragons.service';
+import { ListDragonsResolveService } from './services/list-dragons-resolve.service';
+import { TableComponent } from './pages/dragons/list/table/table.component';
 
 @NgModule({
   declarations: [
@@ -22,16 +26,20 @@ import { LoginService } from './services/login.service';
     LoginComponent,
     DragonsComponent,
     DetailComponent,
-    NewComponent
+    NewComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [
     Auth,
+    ListDragonsService,
+    ListDragonsResolveService,
     LoginService
   ],
   bootstrap: [AppComponent]
