@@ -9,9 +9,14 @@ export class LoginService {
 
     if(formData.login=="admin" && formData.senha=="teste123"){
       sessionStorage.setItem("isLogged","true");
-      return Promise.resolve(true);
+      return new Promise(resolve => 
+        setTimeout(() => resolve(true), 500)
+      );
     }else{
-      return Promise.resolve(false);
+      sessionStorage.setItem("isLogged","false");
+      return new Promise(resolve => 
+        setTimeout(() => resolve(false), 500)
+      );
     }
 
   }

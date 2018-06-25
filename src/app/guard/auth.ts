@@ -8,13 +8,11 @@ export class Auth {
     isLogged: boolean = sessionStorage.getItem("isLogged")=="true"?true:false;
 
     canActivate(): boolean{
+        this.isLogged = sessionStorage.getItem("isLogged")=="true"?true:false;
         if(this.isLogged){
             return true;
-        }else{
-            this.router.navigate(['/login']);
-            return false
         }
-        // this.router.navigate(['/home']);
-        // return false;
+        this.router.navigate(['/login']);
+        return false
     }
 }
