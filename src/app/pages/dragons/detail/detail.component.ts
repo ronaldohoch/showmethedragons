@@ -25,7 +25,8 @@ export class DetailComponent implements OnInit {
 
   createForm(data:Dragon){
     this.formEdit = this.formBuilder.group({
-      name: new FormControl(data.name, {validators: Validators.required}),
+      name: new FormControl({value: data.name,disabled: this.slug==undefined}, Validators.required),
+      // name: new FormControl(data.name, {validators: Validators.required}),
       type: new FormControl(data.type, {validators: Validators.required}),
       histories: new FormControl(data.histories, {validators: Validators.required})
     });
