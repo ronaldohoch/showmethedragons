@@ -20,11 +20,12 @@
       "prefix": "app",
       "styles": [
         "styles.css",
+        "../node_modules/alertifyjs/build/css/alertify.min.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "assets/less/main.less"
       ],
       "scripts": [
-        "../node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"
+        "../node_modules/alertifyjs/build/alertify.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

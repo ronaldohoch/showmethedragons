@@ -12,7 +12,6 @@ import { DetailComponent } from './pages/dragons/detail/detail.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
-import { NewComponent } from './pages/dragons/new/new.component';
 
 import { LoginService } from './services/login.service';
 import { ListDragonsService } from './services/list-dragons.service';
@@ -26,7 +25,6 @@ import { TableComponent } from './pages/dragons/list/table/table.component';
     LoginComponent,
     DragonsComponent,
     DetailComponent,
-    NewComponent,
     TableComponent
   ],
   imports: [

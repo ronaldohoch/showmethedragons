@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ListDragonsService } from '../../../../services/list-dragons.service';
 
 @Component({
   selector: 'app-table',
@@ -8,10 +9,21 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TableComponent implements OnInit {
   
   @Input() dragons: object;
+  @Output() clickEvent = new EventEmitter;
 
-  constructor() { }
+  constructor(
+    private listSvc: ListDragonsService
+  ) { }
 
   ngOnInit() {
+  }
+
+  emitEventDragon(event,slug:string,type:string){
+    event.preventDefault();
+    this.clickEvent.emit({
+      "slug":slug,
+      "type":type
+    });
   }
 
 }
