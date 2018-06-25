@@ -5,9 +5,29 @@
       </div>
     </div>
     <div class="col-md-6">
-      <!-- <h3 class="mt-4 mb-4">Show me the dragons!</h3> -->
-      <form>
-        <legend>{{formTitle}}</legend>
-      </form>
+      <div class="row justify-content-md-center">
+        <div class="col-md-8">
+          <form [formGroup]="formEdit" (ngSubmit)="sendForm()">
+            <legend>{{formTitle}}</legend>
+            <div class="form-group">
+              <label>Nome do dragão</label><br />
+              <input class="form-control" placeholder="Nome do dragão" type="text" formControlName="name" name="name"/>
+            </div>
+            <div class="form-group">
+              <label>Tipo do dragão</label><br />
+              <input class="form-control" placeholder="Tipo do dragão" type="text" formControlName="type" name="type"/>
+              <small class="form-text text-muted">Água, fogo, gelo...</small>
+            </div>
+            <div class="form-group">
+              <label>Histórias em que o dragão aparece</label><br />
+              <input class="form-control" placeholder="Senhor dos anéis, harry potter" type="text" formControlName="histories" name="histories"/>
+              <small class="form-text text-muted">Separe por vírgula</small>
+            </div>
+            <div class="form-group text-right">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>

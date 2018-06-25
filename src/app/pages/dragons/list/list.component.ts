@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ListDragonsService } from '../../../services/list-dragons.service';
+
 declare let alertify: any;
-import "../../../../../node_modules/alertifyjs/build/alertify.min.js";
+// import "../../../../../node_modules/alertifyjs/build/alertify.min.js";
 
 @Component({
   selector: 'app-list',

@@ -27,7 +27,6 @@ export class LoginComponent implements OnInit {
   }
 
   sendLogin(){
-    console.log("sendLogin");
     if(this.loginForm.status==="VALID"){
       this.loginSvc.verifyLogin(this.loginForm.value).then(result=>{
         if(result){
