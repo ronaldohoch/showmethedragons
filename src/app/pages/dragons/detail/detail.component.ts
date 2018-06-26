@@ -12,7 +12,7 @@ declare let alertify: any;
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  slug:string="";
+  slug:string;
   formTitle:string = "Cadastrar Dragão";
   formEdit: FormGroup;
   dragonData:Dragon = {name:'',type:'',histories:''};
@@ -25,8 +25,7 @@ export class DetailComponent implements OnInit {
 
   createForm(data:Dragon){
     this.formEdit = this.formBuilder.group({
-      name: new FormControl({value: data.name,disabled: this.slug==undefined}, Validators.required),
-      // name: new FormControl(data.name, {validators: Validators.required}),
+      name: new FormControl(data.name, {validators: Validators.required}),
       type: new FormControl(data.type, {validators: Validators.required}),
       histories: new FormControl(data.histories, {validators: Validators.required})
     });
@@ -51,7 +50,6 @@ export class DetailComponent implements OnInit {
   }
 
   sendForm(){
-    console.log("dragonData",this.formEdit.value);
     // let formData = this.formEdit.value;
     let type = this.slug!=undefined?"put":"post";
 
@@ -66,8 +64,4 @@ export class DetailComponent implements OnInit {
         }
       })
   }
-  
-  // onFormSubmit(){
-  // }
-
 }

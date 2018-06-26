@@ -1,8 +1,13 @@
 <div class="row full-page">
+  <div class="col-md-6 listar-dragoes-2 voltar d-md-none d-lg-none d-xl-none">
+    <div class="overflow">
+      <a href="" class="main-link" [routerLink]="['/dragons']">Voltar</a>
+    </div>
+  </div>
   <div class="col-md-6">
     <app-table [dragons]="dragons" (clickEvent)="clickReciver($event)" class="anime animate-list"></app-table>
   </div>
-  <div class="col-md-6 listar-dragoes-2">
+  <div class="col-md-6 listar-dragoes-2 d-sm-none d-xs-none d-md-block d-lg-block d-xl-block">
     <div class="overflow">
       <a href="" class="main-link" [routerLink]="['/dragons']">Voltar</a>
     </div>

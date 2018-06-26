@@ -1,28 +1,30 @@
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th class="col" style="width:25%">Nome</th>
-      <th class="col" style="width:25%">Tipo</th>
-      <th class="col" style="width:30%">Histórias</th>
-      <th class="col" style="width:20%">Ações</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let dragon of dragons">
-      <td>
-        {{dragon.name}}<br/>
-        <small><strong>{{dragon.slug}}</strong></small>
-      </td>
-      <td>{{dragon.type}}</td>
-      <td>
-        <ul>
-          <li *ngFor="let history of dragon.histories">{{history}}</li>
-        </ul>
-      </td>
-      <td>
-        <a href="" (click)="emitEventDragon($event,dragon.slug,'edit')"><img width="32px" src="../../../../../assets/img/edit.svg"/></a>
-        <a href="" (click)="emitEventDragon($event,dragon.slug,'delete')"><img width="32px" src="../../../../../assets/img/rubbish-bin.svg"/></a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="col">Nome</th>
+        <th class="col">Tipo</th>
+        <th class="col">Histórias</th>
+        <th class="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dragon of dragons">
+        <td>
+          {{dragon.name}}<br/>
+          <small><strong>{{dragon.slug}}</strong></small>
+        </td>
+        <td>{{dragon.type}}</td>
+        <td>
+          <ul>
+            <li *ngFor="let history of dragon.histories">{{history}}</li>
+          </ul>
+        </td>
+        <td>
+          <a href="" (click)="emitEventDragon($event,dragon.slug,'edit')"><img width="32px" src="../../../../../assets/img/edit.svg"/></a>
+          <a href="" (click)="emitEventDragon($event,dragon.slug,'delete')"><img width="32px" src="../../../../../assets/img/rubbish-bin.svg"/></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
